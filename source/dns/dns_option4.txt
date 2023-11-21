@@ -1,0 +1,6 @@
+/ip dns set servers=108.137.35.4,108.137.44.33
+/ip firewall nat 
+/add chain=dstnat action=dst-nat to-addresses=108.137.35.4 to-ports=53 protocol=tcp dst-port=53
+/add chain=dstnat action=dst-nat to-addresses=108.137.35.4 to-ports=53 protocol=udp dst-port=53
+/add chain=dstnat action=dst-nat to-addresses=108.137.44.33 to-ports=53 protocol=tcp dst-port=53
+/add chain=dstnat action=dst-nat to-addresses=108.137.44.33 to-ports=53 protocol=udp dst-port=53

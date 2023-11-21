@@ -1,0 +1,6 @@
+/ip dns set server=77.88.8.7,77.88.8.3
+/ip firewall nat 
+/add chain=dstnat action=dst-nat to-addresses=77.88.8.7 to-ports=53 protocol=tcp dst-port=53
+/add chain=dstnat action=dst-nat to-addresses=77.88.8.7 to-ports=53 protocol=udp dst-port=53
+/add chain=dstnat action=dst-nat to-addresses=77.88.8.3 to-ports=53 protocol=tcp dst-port=53
+/add chain=dstnat action=dst-nat to-addresses=77.88.8.3 to-ports=53 protocol=udp dst-port=53
